@@ -24,7 +24,7 @@ def scrape():
     scraper.scrape_all()
     return {"message": "Scraping complete and FAISS index updated."}
 
-@app.post("/answer_queries")
+@app.get("/answer_queries")
 def answer_queries():
     results = scraper.answer_queries()
     if not results:
