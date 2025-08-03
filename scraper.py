@@ -223,8 +223,9 @@ class BitoviScraper:
                 if not results:
                     print("No relevant articles found.")
                 else:
-                    for r in results:
-                        print(f"[Rank {r['rank']}] {r['title']}\nURL: {r['url']}\nScore: {r['similarity_score']:.4f}\nPreview: {r['content_preview']}\n")
+                    return results
+                    # for r in results:
+                    #     print(f"[Rank {r['rank']}] {r['title']}\nURL: {r['url']}\nScore: {r['similarity_score']:.4f}\nPreview: {r['content_preview']}\n")
 
 # main() remains unchanged
 # if __name__ == "__main__":
