@@ -23,3 +23,11 @@ def search_all(q: str, threshold: float = 0.1):
 def scrape():
     scraper.scrape_all()
     return {"message": "Scraping complete and FAISS index updated."}
+
+@app.post("/answer_queries")
+def answer_queries():
+    results = scraper.answer_queries()
+    if not results:
+        return {"message": "No results found."}
+    else:
+        return results
